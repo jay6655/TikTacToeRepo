@@ -34,7 +34,7 @@
             android:layout_weight="1"
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginBottom="@dimen/_5sdp"
-            android:src="@drawable/oo"
+            android:src="@drawable/x"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_40sdp"/>
 
@@ -70,7 +70,7 @@
             android:layout_weight="1"
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginBottom="@dimen/_5sdp"
-            android:src="@drawable/x"
+            android:src="@drawable/oo"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_40sdp"/>
     </LinearLayout>
@@ -93,11 +93,16 @@
             <ImageView
                 android:padding="@dimen/_10sdp"
                 android:background="@drawable/board"
-                android:id="@+id/tzz"
+                android:id="@+id/button_00"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="kzz" />
+                android:layout_weight="1" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/text_00"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
 
             <View
                 android:layout_width="@dimen/line_thickness"
@@ -107,11 +112,16 @@
             <ImageView
                 android:padding="@dimen/_10sdp"
                 android:background="@drawable/board"
-                android:id="@+id/tzo"
+                android:id="@+id/button_01"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="kzo" />
+                android:layout_weight="1" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/text_01"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
 
             <View
                 android:layout_width="@dimen/line_thickness"
@@ -119,13 +129,17 @@
                 android:background="@color/lineColor" />
 
             <ImageView
-                android:padding="@dimen/_10sdp"
                 android:background="@drawable/board"
-                android:id="@+id/tzt"
+                android:padding="@dimen/_10sdp"
+                android:id="@+id/button_02"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="kzt" />
+                android:layout_weight="1" />
+            <Button
+                android:visibility="gone"
+                android:id="@+id/text_02"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
 
@@ -143,11 +157,15 @@
             <ImageView
                 android:padding="@dimen/_10sdp"
                 android:background="@drawable/board"
-                android:id="@+id/toz"
+                android:id="@+id/button_10"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="koz" />
+                android:layout_weight="1" />
+            <Button
+                android:visibility="gone"
+                android:id="@+id/text_10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
 
             <View
                 android:layout_width="@dimen/line_thickness"
@@ -157,11 +175,15 @@
             <ImageView
                 android:padding="@dimen/_10sdp"
                 android:background="@drawable/board"
-                android:id="@+id/too"
+                android:id="@+id/button_11"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="koo" />
+                android:layout_weight="1" />
+            <Button
+                android:visibility="gone"
+                android:id="@+id/text_11"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
 
             <View
                 android:layout_width="@dimen/line_thickness"
@@ -171,11 +193,16 @@
             <ImageView
                 android:padding="@dimen/_10sdp"
                 android:background="@drawable/board"
-                android:id="@+id/tot"
+                android:id="@+id/button_12"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="kot" />
+                android:layout_weight="1" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/text_12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
 
 
         </LinearLayout>
@@ -194,11 +221,15 @@
         <ImageView
             android:padding="@dimen/_10sdp"
             android:background="@drawable/board"
-            android:id="@+id/ttz"
+            android:id="@+id/button_20"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="ktz" />
+            android:layout_weight="1" />
+            <Button
+                android:visibility="gone"
+                android:id="@+id/text_20"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
 
         <View
             android:layout_width="@dimen/line_thickness"
@@ -208,11 +239,15 @@
         <ImageView
             android:padding="@dimen/_10sdp"
             android:background="@drawable/board"
-            android:id="@+id/tto"
+            android:id="@+id/button_21"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="kto" />
+            android:layout_weight="1" />
+            <Button
+                android:visibility="gone"
+                android:id="@+id/text_21"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
 
         <View
             android:layout_width="@dimen/line_thickness"
@@ -222,11 +257,16 @@
         <ImageView
             android:padding="@dimen/_10sdp"
             android:background="@drawable/board"
-            android:id="@+id/ttt"
+            android:id="@+id/button_22"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="ktt" />
+            android:layout_weight="1" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/text_22"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
 
 
     </LinearLayout>
