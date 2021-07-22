@@ -1,7 +1,6 @@
 package com.example.tiktactoerepo
 
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
@@ -9,7 +8,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class PlayingActivity : AppCompatActivity() , View.OnClickListener {
+
+class PlayingActivity : AppCompatActivity(), View.OnClickListener {
 
     private val dimention = 3
     private val buttons = Array(dimention) {
@@ -34,6 +34,8 @@ class PlayingActivity : AppCompatActivity() , View.OnClickListener {
     private var p1Points = 0
     private var p2Points = 0
 
+//    var line
+
     private var p1Score: TextView? = null
     private var p2Score: TextView? = null
 
@@ -41,6 +43,8 @@ class PlayingActivity : AppCompatActivity() , View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_play)
+
+//        line = findViewById<View>(R.id.line)
 
 //        p1Score = findViewById(R.id.text_view_p1)
 //        p2Score = findViewById(R.id.text_view_p2)
@@ -60,7 +64,7 @@ class PlayingActivity : AppCompatActivity() , View.OnClickListener {
         for (i in 0 until dimention) {
             for (j in 0 until dimention) {
                 texts[i][j] = "ABC"
-                Log.e("AAA" , texts[i][j] + " ss " + i + " j : " + j);
+                Log.e("AAA", texts[i][j] + " ss " + i + " j : " + j)
             }
         }
     }
@@ -72,80 +76,71 @@ class PlayingActivity : AppCompatActivity() , View.OnClickListener {
             (view as ImageView).setImageResource(R.drawable.oo)
         }
 
-        when (view!!.id) {
+        when (view.id) {
             R.id.button_00 -> {
-                Log.e("AAA" , " R.id.button_00 click  ");
-                if(p1Turn){
-                    texts[0][0] = "x";
-                }
-                else{
-                    texts[0][0] = "0";
+                Log.e("AAA", " R.id.button_00 click  ")
+                if (p1Turn) {
+                    texts[0][0] = "x"
+                } else {
+                    texts[0][0] = "0"
                 }
             }
             R.id.button_01 -> {
-                Log.e("AAA" , " R.id.button_01 click  ");
-                if(p1Turn){
-                    texts[0][1] = "x";
-                }
-                else{
-                    texts[0][1] = "0";
+                Log.e("AAA", " R.id.button_01 click  ")
+                if (p1Turn) {
+                    texts[0][1] = "x"
+                } else {
+                    texts[0][1] = "0"
                 }
             }
             R.id.button_02 -> {
-                Log.e("AAA" , " R.id.button_02 click  ");
-                if(p1Turn){
-                    texts[0][2] = "x";
-                }
-                else{
-                    texts[0][2] = "0";
+                Log.e("AAA", " R.id.button_02 click  ")
+                if (p1Turn) {
+                    texts[0][2] = "x"
+                } else {
+                    texts[0][2] = "0"
                 }
             }
             R.id.button_10 -> {
-                if(p1Turn){
-                    texts[1][0] = "x";
-                }
-                else{
-                    texts[1][0] = "0";
+                if (p1Turn) {
+                    texts[1][0] = "x"
+                } else {
+                    texts[1][0] = "0"
                 }
             }
             R.id.button_11 -> {
-                if(p1Turn){
-                    texts[1][1] = "x";
-                }
-                else{
-                    texts[1][1] = "0";
+                if (p1Turn) {
+                    texts[1][1] = "x"
+                } else {
+                    texts[1][1] = "0"
                 }
             }
             R.id.button_12 -> {
-                if(p1Turn){
-                    texts[1][2] = "x";
-                }
-                else{
-                    texts[1][2] = "0";
+                if (p1Turn) {
+                    texts[1][2] = "x"
+                } else {
+                    texts[1][2] = "0"
                 }
             }
             R.id.button_20 -> {
-                if(p1Turn){
-                    texts[2][0] = "x";
-                }
-                else{
-                    texts[2][0] = "0";
+                if (p1Turn) {
+                    texts[2][0] = "x"
+                } else {
+                    texts[2][0] = "0"
                 }
             }
             R.id.button_21 -> {
-                if(p1Turn){
-                    texts[2][1] = "x";
-                }
-                else{
-                    texts[2][1] = "0";
+                if (p1Turn) {
+                    texts[2][1] = "x"
+                } else {
+                    texts[2][1] = "0"
                 }
             }
             R.id.button_22 -> {
-                if(p1Turn){
-                    texts[2][2] = "x";
-                }
-                else{
-                    texts[2][2] = "0";
+                if (p1Turn) {
+                    texts[2][2] = "x"
+                } else {
+                    texts[2][2] = "0"
                 }
             }
         }
@@ -159,7 +154,7 @@ class PlayingActivity : AppCompatActivity() , View.OnClickListener {
                 p2Win()
             }
         } else if (runder == 9) {
-            draw();
+            draw()
         } else {
             p1Turn = !p1Turn
         }
@@ -171,29 +166,34 @@ class PlayingActivity : AppCompatActivity() , View.OnClickListener {
                 dimention
             )
         }
+//        val horizontalLineAnimation = TranslateAnimation( buttons[0][0]!!.pivotX, buttons[0][0]!!.pivotY, buttons[2][2]!!.pivotX, buttons[2][2]!!.pivotY)
+//        horizontalLineAnimation.duration = 1000
+//        findViewById<View>(R.id.line).startAnimation(horizontalLineAnimation)
+
         for (i in 0 until dimention) {
             for (j in 0 until dimention) {
                 field[i][j] = texts[i][j]
-                Log.e("AAA" , texts[i][j] + " ss " + i + " j : " + j);
+                Log.e("AAA", texts[i][j] + " ss " + i + " j : " + j)
             }
         }
         for (i in 0 until dimention) {
             if (field[i][0] == field[i][1] && field[i][0] == field[i][2] && field[i][0] != "ABC") {
-                Log.e("AAA" , "FOR 1 call ");
+                Log.e("AAA", "FOR 1 call ")
                 return true
             }
         }
         for (i in 0 until dimention) {
             if (field[0][i] == field[1][i] && field[0][i] == field[2][i] && field[0][i] != "ABC") {
-                Log.e("AAA" , "FOR 2 call ");
+                Log.e("AAA", "FOR 2 call ")
                 return true
             }
         }
         if (field[0][0] == field[1][1] && field[0][0] == field[2][2] && field[0][0] != "ABC") {
-            Log.e("AAA" , "FOR 3 call ");
+            Log.e("AAA", "FOR 3 call ")
+
             return true
         }
-        Log.e("AAA" , "FOR 4  call ");
+        Log.e("AAA", "FOR 4  call ")
         return field[0][2] == field[1][1] && field[0][2] == field[2][0] && field[0][2] != "ABC"
     }
 
@@ -201,7 +201,7 @@ class PlayingActivity : AppCompatActivity() , View.OnClickListener {
         p1Points++
         Toast.makeText(this, "Player 1 wins!", Toast.LENGTH_SHORT).show()
         p1TotalWins++
-      //  ScoreText()
+        //  ScoreText()
         CleanBoard()
     }
 
@@ -209,7 +209,7 @@ class PlayingActivity : AppCompatActivity() , View.OnClickListener {
         p2Points++
         Toast.makeText(this, "Player 2 wins!", Toast.LENGTH_SHORT).show()
         p2TotalWins++
-      //  ScoreText()
+        //  ScoreText()
         CleanBoard()
     }
 
@@ -221,7 +221,7 @@ class PlayingActivity : AppCompatActivity() , View.OnClickListener {
     private fun Reset() {
         p1Points = 0
         p2Points = 0
-       // ScoreText()
+        // ScoreText()
         CleanBoard()
     }
 
@@ -234,11 +234,10 @@ class PlayingActivity : AppCompatActivity() , View.OnClickListener {
         for (i in 0 until dimention) {
             for (j in 0 until dimention) {
                 texts[i][j] = "ABC"
-                Log.e("AAA" , texts[i][j] + " ss " + i + " j : " + j);
+                Log.e("AAA", texts[i][j] + " ss " + i + " j : " + j)
             }
         }
         runder = 0
         p1Turn = true
     }
-
 }
