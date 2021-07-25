@@ -26,15 +26,13 @@ class PlayingActivity : AppCompatActivity(), View.OnClickListener {
 
     private var p1Turn = true
 
-    var p1TotalWins = 0
-    var p2TotalWins = 0
+    private var p1TotalWins = 0
+    private var p2TotalWins = 0
 
     private var runder = 0
 
     private var p1Points = 0
     private var p2Points = 0
-
-//    var line
 
     private var p1Score: TextView? = null
     private var p2Score: TextView? = null

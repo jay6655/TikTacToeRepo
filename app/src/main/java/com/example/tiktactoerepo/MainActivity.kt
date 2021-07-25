@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Button
 
 class MainActivity : AppCompatActivity()  {
@@ -15,17 +14,19 @@ class MainActivity : AppCompatActivity()  {
 
     override fun onStart() {
         super.onStart()
-        val singlePlayer =  findViewById<Button>(R.id.singlePlayer);
+        val singlePlayer =  findViewById<Button>(R.id.singlePlayer)
         singlePlayer.setOnClickListener {
-            Log.e("AAA", "singlePlayer Clicked ");
+            Log.e("AAA", "singlePlayer Clicked ")
 
-            val intent = Intent(this@MainActivity,PlayingActivity::class.java);
+            val intent = Intent(this@MainActivity,ComputerPlayingActivity::class.java)
             startActivity(intent)
         }
 
-        val multiplePlayer =  findViewById<Button>(R.id.multiplePlayer);
+        val multiplePlayer =  findViewById<Button>(R.id.multiplePlayer)
         multiplePlayer.setOnClickListener {
-            Log.e("AAA", "multiplePlayer Clicked ");
+            Log.e("AAA", "multiplePlayer Clicked ")
+            val intent = Intent(this@MainActivity,PlayingActivity::class.java)
+            startActivity(intent)
         }
     }
 }

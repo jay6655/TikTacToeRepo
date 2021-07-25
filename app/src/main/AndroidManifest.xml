@@ -18,6 +18,8 @@
         </activity>
 
         <activity android:name=".PlayingActivity"/>
+
+        <activity android:name=".ComputerPlayingActivity"/>
     </application>
 
 </manifest>
